@@ -33,7 +33,7 @@ import javax.swing.KeyStroke;
 public class MarkToAction extends AbstractAction{
     private static final String TEXT = "Mark \'To\'";
     
-    private static final String ICON = "english/image/to_22x22.png";
+    private static final String ICON = "mdic/image/to_22x22.png";
     
     private Player player;
     

@@ -34,7 +34,7 @@ import javax.swing.KeyStroke;
 public class PauseAction extends AbstractAction{
     private static final String TEXT = "Pause";
     
-    private static final String ICON = "english/image/media-playback-pause.png";
+    private static final String ICON = "mdic/image/media-playback-pause.png";
     
     private Player player;
     

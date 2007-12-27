@@ -32,7 +32,7 @@ import javax.swing.JFrame;
 public class ExitAction extends AbstractAction{
     private static final String TEXT = "Exit";
     
-    private static final String ICON = "english/image/application-exit.png";
+    private static final String ICON = "mdic/image/application-exit.png";
     
     private Player player;
     private JFrame frame;

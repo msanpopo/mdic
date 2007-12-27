@@ -34,7 +34,7 @@ import javax.swing.KeyStroke;
 public class TopAction extends AbstractAction{
     private static final String TEXT = "Top";
     
-    private static final String ICON = "english/image/media-skip-backward.png";
+    private static final String ICON = "mdic/image/media-skip-backward.png";
     
     private Player player;
     

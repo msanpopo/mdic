@@ -33,7 +33,7 @@ import javax.swing.KeyStroke;
 public class ShiftMarkAction extends AbstractAction{
     private static final String TEXT = "Shift";
     
-    private static final String ICON = "english/image/shift.png";
+    private static final String ICON = "mdic/image/shift.png";
     
     private Player player;
     

@@ -34,7 +34,7 @@ import javax.swing.KeyStroke;
 public class StartAction extends AbstractAction{
     private static final String TEXT = "Start";
     
-    private static final String ICON = "english/image/media-playback-start.png";
+    private static final String ICON = "mdic/image/media-playback-start.png";
     
     private Player player;
     
