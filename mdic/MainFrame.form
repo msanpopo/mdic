@@ -485,7 +485,7 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/english/image/mark_from.png"/>
+              <Image iconType="3" name="/mdic/image/from_22x22.png"/>
             </Property>
           </Properties>
         </Component>
@@ -536,7 +536,7 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/english/image/mark_to.png"/>
+              <Image iconType="3" name="/mdic/image/to_22x22.png"/>
             </Property>
           </Properties>
         </Component>
@@ -593,7 +593,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="resultLabel" alignment="0" pref="215" max="32767" attributes="0"/>
+              <Component id="resultLabel" alignment="0" pref="191" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">

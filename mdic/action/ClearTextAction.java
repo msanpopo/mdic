@@ -34,7 +34,7 @@ import javax.swing.KeyStroke;
 public class ClearTextAction extends AbstractAction{
     private static final String TEXT = "Clear";
     
-    private static final String ICON = "english/image/edit-clear.png";
+    private static final String ICON = "mdic/image/edit-clear.png";
     
     private Player player;
     private MainFrame frame;

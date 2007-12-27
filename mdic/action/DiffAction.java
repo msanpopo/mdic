@@ -33,7 +33,7 @@ import javax.swing.ImageIcon;
 public class DiffAction extends AbstractAction{
     private static final String TEXT = "Diff";
     
-    private static final String ICON = "english/image/dialog-information.png";
+    private static final String ICON = "mdic/image/dialog-information.png";
     
     private Player player;
     private MainFrame frame;

@@ -37,7 +37,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 public class OpenAction extends AbstractAction{
     private static final String TEXT = "Open";
     
-    private static final String ICON = "english/image/document-open.png";
+    private static final String ICON = "mdic/image/document-open.png";
     
     private Player player;
     

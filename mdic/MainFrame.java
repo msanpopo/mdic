@@ -46,10 +46,10 @@ import javax.swing.text.StyleContext;
 import javax.swing.text.StyledDocument;
 
 public class MainFrame extends javax.swing.JFrame implements PlayerListener{
-    private static final String PLAY_ICON = "english/image/media-playback-start.png";
-    private static final String PAUSE_ICON = "english/image/media-playback-pause.png";
-    private static final String FROM_ICON = "english/image/mark_from.png";
-    private static final String TO_ICON = "english/image/mark_to.png";
+    private static final String PLAY_ICON = "mdic/image/media-playback-start.png";
+    private static final String PAUSE_ICON = "mdic/image/media-playback-pause.png";
+    private static final String FROM_ICON = "mdic/image/mark_from.png";
+    private static final String TO_ICON = "mdic/image/mark_to.png";
     
     private Icon playIcon;
     private Icon pauseIcon;
@@ -517,7 +517,7 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener{
         jToolBar4.setFloatable(false);
         jToolBar4.setRollover(true);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/english/image/mark_from.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mdic/image/from_22x22.png"))); // NOI18N
         jToolBar4.add(jLabel1);
 
         fromLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -554,7 +554,7 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener{
         jLabel3.setText("      ");
         jToolBar4.add(jLabel3);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/english/image/mark_to.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mdic/image/to_22x22.png"))); // NOI18N
         jToolBar4.add(jLabel2);
 
         toLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -596,7 +596,7 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener{
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(resultLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+            .addComponent(resultLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

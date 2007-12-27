@@ -33,7 +33,7 @@ import javax.swing.KeyStroke;
 public class JumpAction extends AbstractAction{
     private static final String TEXT = "Jump";
     
-    private static final String ICON = "english/image/jump.png";
+    private static final String ICON = "mdic/image/jump.png";
     
     private Player player;
     

@@ -34,7 +34,7 @@ import javax.swing.KeyStroke;
 public class BackwardAction extends AbstractAction{
     private static final String TEXT = "Backward";
     
-    private static final String ICON = "english/image/media-seek-backward.png";
+    private static final String ICON = "mdic/image/media-seek-backward.png";
     
     private Player player;
     private int second;

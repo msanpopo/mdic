@@ -34,7 +34,7 @@ import javax.swing.KeyStroke;
 public class ForwardAction extends AbstractAction{
     private static final String TEXT = "Forward";
     
-    private static final String ICON = "english/image/media-seek-forward.png";
+    private static final String ICON = "mdic/image/media-seek-forward.png";
     
     private Player player;
     private int second;
