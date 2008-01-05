@@ -45,7 +45,7 @@ import javax.swing.text.StyleConstants;
 import javax.swing.text.StyleContext;
 import javax.swing.text.StyledDocument;
 
-public class MainFrame extends javax.swing.JFrame implements PlayerListener{
+public class MainFrame extends javax.swing.JFrame implements PlayerListener, TimerListener{
     private static final String PLAY_ICON = "mdic/image/media-playback-start.png";
     private static final String PAUSE_ICON = "mdic/image/media-playback-pause.png";
     private static final String FROM_ICON = "mdic/image/mark_from.png";
@@ -78,6 +78,8 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener{
     private ClearTextAction clearTextAction;
     private DiffAction diffAction;
     
+    private Timer timer;
+    
     public MainFrame(Player player) {
         ClassLoader cl = this.getClass().getClassLoader();
         playIcon  = new ImageIcon(cl.getResource(PLAY_ICON));
@@ -98,6 +100,9 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener{
         this.labelHash = new Hashtable<Integer, JLabel>();
         this.labelHash.put(fromMark.getPos(), fromMark.getLabel());
         this.labelHash.put(toMark.getPos(), toMark.getLabel());
+        
+        this.timer = new Timer();
+        this.timer.setListener(this);
         
         initComponents();
         
@@ -291,6 +296,11 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener{
             StyleConstants.setBackground(s, rt.getColor());
         }
     }
+
+    public void clockChanged(Timer timer) {
+        String s = timer.getTimeString();
+        timerLabel.setText(s);
+    }
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -331,6 +341,12 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener{
         incToButton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         resultLabel = new javax.swing.JLabel();
+        jToolBar5 = new javax.swing.JToolBar();
+        jLabel4 = new javax.swing.JLabel();
+        startTimerButton = new javax.swing.JButton();
+        stopTimerButton = new javax.swing.JButton();
+        resetTimerButton = new javax.swing.JButton();
+        timerLabel = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -423,12 +439,12 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener{
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(statusLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+            .addComponent(statusLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(slider, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(timeLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 16, Short.MAX_VALUE))
+                    .addComponent(slider, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
+                    .addComponent(timeLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -603,6 +619,48 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener{
             .addComponent(resultLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
         );
 
+        jToolBar5.setFloatable(false);
+        jToolBar5.setRollover(true);
+
+        jLabel4.setText("Timer : ");
+        jToolBar5.add(jLabel4);
+
+        startTimerButton.setText("Start");
+        startTimerButton.setFocusable(false);
+        startTimerButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        startTimerButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        startTimerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                startTimerButtonActionPerformed(evt);
+            }
+        });
+        jToolBar5.add(startTimerButton);
+
+        stopTimerButton.setText("Stop");
+        stopTimerButton.setFocusable(false);
+        stopTimerButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        stopTimerButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        stopTimerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                stopTimerButtonActionPerformed(evt);
+            }
+        });
+        jToolBar5.add(stopTimerButton);
+
+        resetTimerButton.setText("Reset");
+        resetTimerButton.setFocusable(false);
+        resetTimerButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        resetTimerButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        resetTimerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetTimerButtonActionPerformed(evt);
+            }
+        });
+        jToolBar5.add(resetTimerButton);
+
+        timerLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        timerLabel.setText("0:00");
+
         fileMenu.setText("File");
 
         openMenuItem.setText("Open");
@@ -709,7 +767,11 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener{
                 .addComponent(jToolBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jToolBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(309, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jToolBar5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(timerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -723,8 +785,11 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener{
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jToolBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToolBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(timerLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(jToolBar5, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jToolBar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jToolBar3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -733,7 +798,7 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener{
                     .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE))
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -759,6 +824,7 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener{
     }                                   
 
     private void formComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentHidden
+        timer.stop();
         System.out.println("MainFrame componentHidden");
         dispose();
         player.quit();
@@ -796,6 +862,18 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener{
         player.shiftToMark(markShift);
     }//GEN-LAST:event_incToMenuItemActionPerformed
 
+    private void startTimerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startTimerButtonActionPerformed
+        timer.start();
+}//GEN-LAST:event_startTimerButtonActionPerformed
+
+    private void stopTimerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stopTimerButtonActionPerformed
+        timer.stop();
+    }//GEN-LAST:event_stopTimerButtonActionPerformed
+
+    private void resetTimerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetTimerButtonActionPerformed
+        timer.reset();
+    }//GEN-LAST:event_resetTimerButtonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backwardButton;
     private javax.swing.JMenuItem backwardMenuItem;
@@ -822,6 +900,7 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener{
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -834,6 +913,7 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener{
     private javax.swing.JToolBar jToolBar2;
     private javax.swing.JToolBar jToolBar3;
     private javax.swing.JToolBar jToolBar4;
+    private javax.swing.JToolBar jToolBar5;
     private javax.swing.JButton jumpButton;
     private javax.swing.JMenuItem jumpMarkMenuItem;
     private javax.swing.JMenuItem jumpTopMenuItem;
@@ -846,6 +926,7 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener{
     private javax.swing.JMenuItem pauseMenuItem;
     private javax.swing.JMenu playMenu;
     private javax.swing.JMenuItem resetMarkMenuItem;
+    private javax.swing.JButton resetTimerButton;
     private javax.swing.JLabel resultLabel;
     private javax.swing.JTextPane scriptTextPane;
     private javax.swing.JButton shiftButton;
@@ -853,10 +934,14 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener{
     private javax.swing.JSlider slider;
     private javax.swing.JButton startButton;
     private javax.swing.JMenuItem startMenuItem;
+    private javax.swing.JButton startTimerButton;
     private javax.swing.JLabel statusLabel;
+    private javax.swing.JButton stopTimerButton;
     private javax.swing.JLabel timeLabel;
+    private javax.swing.JLabel timerLabel;
     private javax.swing.JButton toButton;
     private javax.swing.JLabel toLabel;
     private javax.swing.JButton topButton;
     // End of variables declaration//GEN-END:variables
+
 }
