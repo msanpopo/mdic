@@ -305,30 +305,31 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener, Tim
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jToolBar1 = new javax.swing.JToolBar();
-        fromButton = new javax.swing.JButton();
-        toButton = new javax.swing.JButton();
-        jumpButton = new javax.swing.JButton();
-        shiftButton = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        slider = new javax.swing.JSlider();
-        timeLabel = new javax.swing.JLabel();
-        statusLabel = new javax.swing.JLabel();
+        jToolBar2 = new javax.swing.JToolBar();
+        openButton = new javax.swing.JButton();
+        clearTextButton = new javax.swing.JButton();
+        diffButton = new javax.swing.JButton();
         jToolBar3 = new javax.swing.JToolBar();
         topButton = new javax.swing.JButton();
         backwardButton = new javax.swing.JButton();
         startButton = new javax.swing.JButton();
         pauseButton = new javax.swing.JButton();
         forwardButton = new javax.swing.JButton();
-        jToolBar2 = new javax.swing.JToolBar();
-        openButton = new javax.swing.JButton();
-        clearTextButton = new javax.swing.JButton();
-        diffButton = new javax.swing.JButton();
-        jSplitPane1 = new javax.swing.JSplitPane();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        inputTextPane = new javax.swing.JTextPane();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        scriptTextPane = new javax.swing.JTextPane();
+        jToolBar5 = new javax.swing.JToolBar();
+        jLabel4 = new javax.swing.JLabel();
+        startTimerButton = new javax.swing.JButton();
+        stopTimerButton = new javax.swing.JButton();
+        resetTimerButton = new javax.swing.JButton();
+        timerLabel = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        slider = new javax.swing.JSlider();
+        timeLabel = new javax.swing.JLabel();
+        statusLabel = new javax.swing.JLabel();
+        jToolBar1 = new javax.swing.JToolBar();
+        fromButton = new javax.swing.JButton();
+        toButton = new javax.swing.JButton();
+        jumpButton = new javax.swing.JButton();
+        shiftButton = new javax.swing.JButton();
         jToolBar4 = new javax.swing.JToolBar();
         jLabel1 = new javax.swing.JLabel();
         fromLabel = new javax.swing.JLabel();
@@ -341,12 +342,11 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener, Tim
         incToButton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         resultLabel = new javax.swing.JLabel();
-        jToolBar5 = new javax.swing.JToolBar();
-        jLabel4 = new javax.swing.JLabel();
-        startTimerButton = new javax.swing.JButton();
-        stopTimerButton = new javax.swing.JButton();
-        resetTimerButton = new javax.swing.JButton();
-        timerLabel = new javax.swing.JLabel();
+        jSplitPane1 = new javax.swing.JSplitPane();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        inputTextPane = new javax.swing.JTextPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        scriptTextPane = new javax.swing.JTextPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -380,36 +380,99 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener, Tim
             }
         });
 
-        jToolBar1.setFloatable(false);
-        jToolBar1.setRollover(true);
+        jToolBar2.setFloatable(false);
+        jToolBar2.setRollover(true);
 
-        fromButton.setText("From");
-        fromButton.setFocusable(false);
-        fromButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        fromButton.setOpaque(false);
-        fromButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(fromButton);
+        openButton.setText("Open");
+        openButton.setBorderPainted(false);
+        openButton.setFocusPainted(false);
+        openButton.setFocusable(false);
+        jToolBar2.add(openButton);
 
-        toButton.setText("To");
-        toButton.setFocusable(false);
-        toButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        toButton.setOpaque(false);
-        toButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(toButton);
+        clearTextButton.setText("Clear");
+        clearTextButton.setBorderPainted(false);
+        clearTextButton.setFocusable(false);
+        clearTextButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        clearTextButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar2.add(clearTextButton);
 
-        jumpButton.setText("Jump");
-        jumpButton.setFocusable(false);
-        jumpButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jumpButton.setOpaque(false);
-        jumpButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jumpButton);
+        diffButton.setText("Diff");
+        diffButton.setBorderPainted(false);
+        diffButton.setFocusable(false);
+        diffButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        diffButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar2.add(diffButton);
 
-        shiftButton.setText("Shift");
-        shiftButton.setFocusable(false);
-        shiftButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        shiftButton.setOpaque(false);
-        shiftButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(shiftButton);
+        jToolBar3.setFloatable(false);
+        jToolBar3.setRollover(true);
+
+        topButton.setText("Top");
+        topButton.setBorderPainted(false);
+        topButton.setFocusable(false);
+        topButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jToolBar3.add(topButton);
+
+        backwardButton.setText("<-");
+        backwardButton.setBorderPainted(false);
+        backwardButton.setFocusable(false);
+        backwardButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jToolBar3.add(backwardButton);
+
+        startButton.setText("Start");
+        startButton.setBorderPainted(false);
+        startButton.setFocusable(false);
+        startButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jToolBar3.add(startButton);
+
+        pauseButton.setText("Pause");
+        pauseButton.setBorderPainted(false);
+        pauseButton.setFocusable(false);
+        jToolBar3.add(pauseButton);
+
+        forwardButton.setText("->");
+        forwardButton.setBorderPainted(false);
+        forwardButton.setFocusable(false);
+        forwardButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jToolBar3.add(forwardButton);
+
+        jToolBar5.setFloatable(false);
+        jToolBar5.setRollover(true);
+
+        jLabel4.setText("Timer : ");
+        jToolBar5.add(jLabel4);
+
+        startTimerButton.setText("Start");
+        startTimerButton.setFocusable(false);
+        startTimerButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        startTimerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                startTimerButtonActionPerformed(evt);
+            }
+        });
+        jToolBar5.add(startTimerButton);
+
+        stopTimerButton.setText("Stop");
+        stopTimerButton.setFocusable(false);
+        stopTimerButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        stopTimerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                stopTimerButtonActionPerformed(evt);
+            }
+        });
+        jToolBar5.add(stopTimerButton);
+
+        resetTimerButton.setText("Reset");
+        resetTimerButton.setFocusable(false);
+        resetTimerButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        resetTimerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetTimerButtonActionPerformed(evt);
+            }
+        });
+        jToolBar5.add(resetTimerButton);
+
+        timerLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        timerLabel.setText("0:00");
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -422,7 +485,7 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener, Tim
             }
         });
 
-        timeLabel.setFont(new java.awt.Font("Dialog", 1, 12));
+        timeLabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         timeLabel.setText("0:00 / 0:00");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -432,103 +495,46 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener, Tim
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addComponent(statusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(slider, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE)
+                .addComponent(slider, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(timeLabel)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(statusLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+            .addComponent(statusLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(slider, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
-                    .addComponent(timeLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE))
-                .addContainerGap())
+                .addComponent(timeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(slider, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
         );
 
-        jToolBar3.setFloatable(false);
-        jToolBar3.setRollover(true);
+        jToolBar1.setFloatable(false);
+        jToolBar1.setRollover(true);
 
-        topButton.setText("Top");
-        topButton.setBorderPainted(false);
-        topButton.setFocusable(false);
-        topButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        topButton.setOpaque(false);
-        topButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar3.add(topButton);
+        fromButton.setText("From");
+        fromButton.setFocusable(false);
+        fromButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fromButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(fromButton);
 
-        backwardButton.setText("<-");
-        backwardButton.setBorderPainted(false);
-        backwardButton.setFocusable(false);
-        backwardButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        backwardButton.setOpaque(false);
-        backwardButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar3.add(backwardButton);
+        toButton.setText("To");
+        toButton.setFocusable(false);
+        toButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        toButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(toButton);
 
-        startButton.setText("Start");
-        startButton.setBorderPainted(false);
-        startButton.setFocusable(false);
-        startButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        startButton.setOpaque(false);
-        startButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar3.add(startButton);
+        jumpButton.setText("Jump");
+        jumpButton.setFocusable(false);
+        jumpButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jumpButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(jumpButton);
 
-        pauseButton.setText("Pause");
-        pauseButton.setBorderPainted(false);
-        pauseButton.setFocusable(false);
-        pauseButton.setOpaque(false);
-        jToolBar3.add(pauseButton);
-
-        forwardButton.setText("->");
-        forwardButton.setBorderPainted(false);
-        forwardButton.setFocusable(false);
-        forwardButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        forwardButton.setOpaque(false);
-        forwardButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar3.add(forwardButton);
-
-        jToolBar2.setFloatable(false);
-        jToolBar2.setRollover(true);
-
-        openButton.setText("Open");
-        openButton.setBorderPainted(false);
-        openButton.setFocusPainted(false);
-        openButton.setFocusable(false);
-        openButton.setOpaque(false);
-        jToolBar2.add(openButton);
-
-        clearTextButton.setText("Clear");
-        clearTextButton.setBorderPainted(false);
-        clearTextButton.setFocusable(false);
-        clearTextButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        clearTextButton.setOpaque(false);
-        clearTextButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar2.add(clearTextButton);
-
-        diffButton.setText("Diff");
-        diffButton.setBorderPainted(false);
-        diffButton.setFocusable(false);
-        diffButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        diffButton.setOpaque(false);
-        diffButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar2.add(diffButton);
-
-        jSplitPane1.setDividerLocation(200);
-        jSplitPane1.setDividerSize(5);
-        jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
-
-        inputTextPane.setFont(new java.awt.Font("Dialog", 1, 12));
-        inputTextPane.setPreferredSize(new java.awt.Dimension(6, 150));
-        jScrollPane2.setViewportView(inputTextPane);
-
-        jSplitPane1.setTopComponent(jScrollPane2);
-
-        scriptTextPane.setFont(new java.awt.Font("Dialog", 1, 12));
-        jScrollPane1.setViewportView(scriptTextPane);
-
-        jSplitPane1.setRightComponent(jScrollPane1);
+        shiftButton.setText("Shift");
+        shiftButton.setFocusable(false);
+        shiftButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        shiftButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(shiftButton);
 
         jToolBar4.setFloatable(false);
         jToolBar4.setRollover(true);
@@ -546,7 +552,6 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener, Tim
         decFromButton.setText("<");
         decFromButton.setFocusable(false);
         decFromButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        decFromButton.setOpaque(false);
         decFromButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         decFromButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -558,7 +563,6 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener, Tim
         incFromButton.setText(">");
         incFromButton.setFocusable(false);
         incFromButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        incFromButton.setOpaque(false);
         incFromButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         incFromButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -583,7 +587,6 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener, Tim
         decToButton.setText("<");
         decToButton.setFocusable(false);
         decToButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        decToButton.setOpaque(false);
         decToButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         decToButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -595,7 +598,6 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener, Tim
         incToButton.setText(">");
         incToButton.setFocusable(false);
         incToButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        incToButton.setOpaque(false);
         incToButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         incToButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -612,54 +614,27 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener, Tim
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(resultLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
+            .addComponent(resultLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(resultLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
+            .addComponent(resultLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jToolBar5.setFloatable(false);
-        jToolBar5.setRollover(true);
+        jSplitPane1.setDividerLocation(230);
+        jSplitPane1.setDividerSize(5);
+        jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        jLabel4.setText("Timer : ");
-        jToolBar5.add(jLabel4);
+        inputTextPane.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        inputTextPane.setPreferredSize(new java.awt.Dimension(6, 150));
+        jScrollPane2.setViewportView(inputTextPane);
 
-        startTimerButton.setText("Start");
-        startTimerButton.setFocusable(false);
-        startTimerButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        startTimerButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        startTimerButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                startTimerButtonActionPerformed(evt);
-            }
-        });
-        jToolBar5.add(startTimerButton);
+        jSplitPane1.setTopComponent(jScrollPane2);
 
-        stopTimerButton.setText("Stop");
-        stopTimerButton.setFocusable(false);
-        stopTimerButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        stopTimerButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        stopTimerButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stopTimerButtonActionPerformed(evt);
-            }
-        });
-        jToolBar5.add(stopTimerButton);
+        scriptTextPane.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        jScrollPane1.setViewportView(scriptTextPane);
 
-        resetTimerButton.setText("Reset");
-        resetTimerButton.setFocusable(false);
-        resetTimerButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        resetTimerButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        resetTimerButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                resetTimerButtonActionPerformed(evt);
-            }
-        });
-        jToolBar5.add(resetTimerButton);
-
-        timerLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        timerLabel.setText("0:00");
+        jSplitPane1.setRightComponent(jScrollPane1);
 
         fileMenu.setText("File");
 
@@ -763,15 +738,14 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener, Tim
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jToolBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jToolBar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToolBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jToolBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jToolBar5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(timerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addComponent(timerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -779,26 +753,25 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener, Tim
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 617, Short.MAX_VALUE)
+            .addComponent(jSplitPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(timerLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
-                    .addComponent(jToolBar5, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jToolBar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jToolBar3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jToolBar5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jToolBar2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jToolBar3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(timerLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jToolBar4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jToolBar4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jToolBar1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 364, Short.MAX_VALUE))
         );
 
         pack();
