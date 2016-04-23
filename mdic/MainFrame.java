@@ -621,17 +621,17 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener, Tim
             .addComponent(resultLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jSplitPane1.setDividerLocation(230);
+        jSplitPane1.setDividerLocation(480);
         jSplitPane1.setDividerSize(5);
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        inputTextPane.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        inputTextPane.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         inputTextPane.setPreferredSize(new java.awt.Dimension(6, 150));
         jScrollPane2.setViewportView(inputTextPane);
 
         jSplitPane1.setTopComponent(jScrollPane2);
 
-        scriptTextPane.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        scriptTextPane.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jScrollPane1.setViewportView(scriptTextPane);
 
         jSplitPane1.setRightComponent(jScrollPane1);
@@ -771,7 +771,7 @@ public class MainFrame extends javax.swing.JFrame implements PlayerListener, Tim
                     .addComponent(jToolBar1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 364, Short.MAX_VALUE))
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 548, Short.MAX_VALUE))
         );
 
         pack();
